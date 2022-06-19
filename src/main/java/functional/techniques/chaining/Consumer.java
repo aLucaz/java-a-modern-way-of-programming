@@ -1,13 +1,16 @@
 package functional.techniques.chaining;
 
+import java.util.Objects;
+
 @FunctionalInterface
 public interface Consumer<T> {
     void accept(T t);
 
-    default Consumer<T> thenAccept(Consumer<T> consumer2) {
+    default Consumer<T> thenAccept(Consumer<T> next) {
+        Objects.requireNonNull(next);
         return (T t) -> {
             this.accept(t);
-            consumer2.accept(t);
+            next.accept(t);
         };
     }
 }
