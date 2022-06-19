@@ -11,4 +11,5 @@
   - high order functions
   - referential transparency: a function can be replaced by its evaluated value
   - APIs in a functional way
+  - Lazy evaluation
 - Reactive programming in Java
