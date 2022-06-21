@@ -9,8 +9,9 @@
     - no side effects, doesn't modify any parameter
     - deterministic
   - high order functions
-  - referential transparency: a function can be replaced by its evaluated value
+  - referential transparency
   - APIs in a functional way
   - Lazy evaluation
   - Design patterns
+  - Streams
 - Reactive programming in Java
