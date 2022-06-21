@@ -12,4 +12,5 @@
   - referential transparency: a function can be replaced by its evaluated value
   - APIs in a functional way
   - Lazy evaluation
+  - Design patterns
 - Reactive programming in Java
