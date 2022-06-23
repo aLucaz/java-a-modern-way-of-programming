@@ -13,4 +13,5 @@ much of them I used in the past, but now I tried to understand the fundamentals 
   - Streams
   - Parallel processing
   - Spliterator
+  - Collectors
 - Reactive programming in Java
