@@ -79,7 +79,7 @@ public abstract class ListFun<T> {
         return temp;
     }
 
-    public ListFun<T> addElem(T e) {
+    public ListFun<T> addfront(T e) {
         return new Const<>(e, this);
     }
 
@@ -102,5 +102,31 @@ public abstract class ListFun<T> {
             ListFun<T> newTail = tail().removeElem(e);
             return new Const<>(head(), newTail);
         }
+    }
+
+    public ListFun<T> reverseList() {
+        ListFun<T> newList = list();
+        ListFun<T> temp = this;
+        int i = 0;
+        while (i < this.length()) {
+            newList = newList.addfront(temp.head());
+            temp = temp.tail();
+            i++;
+        }
+        return newList;
+    }
+
+    public ListFun<T> addAll(ListFun<T> other) {
+        ListFun<T> reversed = this.reverseList();
+        while (!other.equals(NIL)) {
+            T head = other.head();
+            reversed = reversed.addfront(head);
+            other = other.tail();
+        }
+        return reversed.reverseList();
+    }
+
+    public ListFun<T> concat(ListFun<T> first, ListFun<T> other) {
+        return first.addAll(other);
     }
 }

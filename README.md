@@ -16,3 +16,6 @@ much of them I used in the past, but now I tried to understand in a deep way.
   - Collectors
   - Data structures in a functional way
 - Reactive programming in Java
+  - ReactiveX & RxJava 
+  - 
+  - 
